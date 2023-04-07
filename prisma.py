@@ -17,13 +17,13 @@ def gamma1(n, beta1):
 def delta(n,beta1):
     return beta1 + gamma1(n,beta1) - alpha
 
-#theta_ = np.linspace(33.3,90)
-#plt.plot(theta_,delta(n,theta_),'go')
+theta_ = np.linspace(33.3,90)
+plt.plot(theta_,delta(n,theta_),'go')
 theta_ = np.linspace(33.3,90,300)
-#plt.plot(theta_,delta(n,theta_),'b-')
-#plt.xlabel("theta")
-#plt.ylabel("delta")
-#plt.show()
+plt.plot(theta_,delta(n,theta_),'b-')
+plt.xlabel("Theta")
+plt.ylabel("Delta")
+plt.show()
 
 A1 = 1.522
 A2 = 4590
@@ -40,12 +40,12 @@ plt.plot(theta_,delta(nYellow,theta_),color='yellow')
 plt.plot(theta_,delta(nGreen,theta_),color='green')
 plt.plot(theta_,delta(nBlue,theta_),color='blue')
 plt.plot(theta_,delta(nPurple,theta_),color='purple')
-plt.xlabel="theta"
-plt.ylabel="delta"
+plt.xlabel("Theta")
+plt.ylabel("Delta")
 plt.show()
 
 ###################### plots
-input = [90, 76, 70, 64, 58, 53, 47]
+input = [82, 76, 70, 64, 58, 53, 47]
 output = [75, 65, 58, 55, 54, 56, 63]
 
 for i in range(len(input)):
@@ -59,8 +59,8 @@ plt.plot(theta_,delta(nYellow,theta_),color='yellow')
 plt.plot(theta_,delta(nGreen,theta_),color='green')
 plt.plot(theta_,delta(nBlue,theta_),color='blue')
 plt.plot(theta_,delta(nPurple,theta_),color='purple')
-plt.xlabel="theta"
-plt.ylabel="delta"
+plt.xlabel("Theta")
+plt.ylabel("Delta")
 
 for i in range(len(input)):
     plt.plot(input[i],np.degrees(np.arctan(output[i]/46)),'o', color=(0,0,0))
